@@ -1,0 +1,67 @@
+<!DOCTYPE html><html class="dark" lang="ru"><head>
+  <meta charset="utf-8">
+  <link href="/vite.svg" rel="icon" type="image/svg+xml">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>
+   YarnTube
+  </title>
+  <meta content="YarnTube — современный видеохостинг для обмена видео" name="description">
+  <script crossorigin="" src="js/index-BR5Ogpgn.js" type="module">
+  </script>
+  <link crossorigin="" href="css/index-CalIaZDA.css" rel="stylesheet">
+  <script type="module">
+   if (window.self === window.top) {
+  let lastPath = "";
+  function getPageNameFromPath(path) {
+    const segments = path.split("/").filter(Boolean);
+    return segments[0] || null;
+  }
+  function trackPageView() {
+    const path = window.location.pathname;
+    if (path === lastPath) return;
+    lastPath = path;
+    const pageName = getPageNameFromPath(path) || "home";
+    const appId = "69c8f093028893d294a28b0b";
+    if (!appId) return;
+    fetch(`/app-logs/${appId}/log-user-in-app/${pageName}`, {
+      method: "POST",
+    }).catch(() => {});
+  }
+  const originalPushState = history.pushState.bind(history);
+  history.pushState = function (...args) {
+    originalPushState(...args);
+    trackPageView();
+  };
+  const originalReplaceState = history.replaceState.bind(history);
+  history.replaceState = function (...args) {
+    originalReplaceState(...args);
+    trackPageView();
+  };
+  window.addEventListener("popstate", trackPageView);
+  trackPageView();
+}
+  </script>
+  <meta content="YarnTube" property="og:title">
+  <meta content="A modern, community-driven video sharing platform designed for creators to upload, share, and discover captivating video content." property="og:description">
+  <meta content="images/f83e935e5_logo.png" property="og:image">
+  <meta content="https://yarn-tube-flow.base44.app" property="og:url">
+  <meta content="website" property="og:type">
+  <meta content="YarnTube" property="og:site_name">
+  <meta content="YarnTube" name="twitter:title">
+  <meta content="A modern, community-driven video sharing platform designed for creators to upload, share, and discover captivating video content." name="twitter:description">
+  <meta content="https://media.base44.com/images/public/69c8f093028893d294a28b0b/f83e935e5_logo.png/v1/fill/w_1200,h_630/f83e935e5_logo.png" name="twitter:image">
+  <meta content="summary_large_image" name="twitter:card">
+  <meta content="https://yarn-tube-flow.base44.app" name="twitter:url">
+  <meta content="yes" name="mobile-web-app-capable">
+  <meta content="black" name="apple-mobile-web-app-status-bar-style">
+  <meta content="YarnTube" name="apple-mobile-web-app-title">
+  <link href="https://yarn-tube-flow.base44.app" rel="canonical">
+  <script async="true" data-app-id="69c8f093028893d294a28b0b" data-platform-url="https://app.base44.com" src="js/badge.js">
+  </script>
+ </head>
+ <body>
+  <div id="root">
+  </div>
+ 
+
+</body></html>
